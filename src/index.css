@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 80 40% 97%;
+    --foreground: 150 30% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 30% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 30% 12%;
+
+    --primary: 145 63% 32%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 45 100% 51%;
+    --secondary-foreground: 150 30% 12%;
+
+    --muted: 80 20% 93%;
+    --muted-foreground: 150 10% 40%;
+
+    --accent: 145 50% 92%;
+    --accent-foreground: 145 63% 22%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 145 20% 85%;
+    --input: 145 20% 85%;
+    --ring: 145 63% 32%;
+
+    --radius: 0.75rem;
+
+    --hero-gradient: linear-gradient(135deg, hsl(145 63% 32%), hsl(145 80% 25%));
+    --gold-gradient: linear-gradient(135deg, hsl(45 100% 51%), hsl(38 100% 50%));
+    --section-gradient: linear-gradient(180deg, hsl(80 40% 97%), hsl(145 30% 95%));
+
+    --font-heading: 'Nunito', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .text-gradient-green {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--hero-gradient);
+  }
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gold-gradient);
+  }
+  .bg-hero-gradient {
+    background-image: var(--hero-gradient);
+  }
+  .bg-gold-gradient {
+    background-image: var(--gold-gradient);
+  }
+  .bg-section-gradient {
+    background-image: var(--section-gradient);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
