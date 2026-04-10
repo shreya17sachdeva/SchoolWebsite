@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { Play, Pause, ChevronLeft, ChevronRight, Volume2, VolumeX, X, Maximize2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -42,6 +42,26 @@ const TestimonialsSection = () => {
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const clickTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  // Pause video when section scrolls out of view
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          videoRef.current?.pause();
+          setIsPlaying(false);
+        }
+      },
+      { threshold: 0.2 } // pause when less than 20% of section is visible
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
 
   const handleNext = () => {
     if (videoRef.current) {
@@ -120,7 +140,7 @@ const TestimonialsSection = () => {
 
   return (
     <>
-      <section id="testimonials" className="py-20 bg-section-gradient overflow-hidden">
+      <section ref={sectionRef} id="testimonials" className="py-20 bg-section-gradient overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <span className="inline-block bg-accent text-accent-foreground font-heading font-bold text-sm px-4 py-1 rounded-full mb-3">
