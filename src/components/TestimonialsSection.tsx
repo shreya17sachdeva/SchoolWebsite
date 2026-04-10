@@ -1,5 +1,5 @@
 import { useState, useRef, useCallback } from "react";
-import { Play, ChevronLeft, ChevronRight, Volume2, VolumeX, X, Maximize2 } from "lucide-react";
+import { Play, Pause, ChevronLeft, ChevronRight, Volume2, VolumeX, X, Maximize2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const videoTestimonials = [
@@ -35,6 +35,8 @@ const videoTestimonials = [
 const TestimonialsSection = () => {
   const [activeIndex, setActiveIndex] = useState(1);
   const [isMuted, setIsMuted] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalVideoSrc, setModalVideoSrc] = useState("");
 
@@ -54,6 +56,18 @@ const TestimonialsSection = () => {
     setIsMuted((prev) => !prev);
     if (videoRef.current) {
       videoRef.current.muted = !videoRef.current.muted;
+    }
+  };
+
+  const togglePlayPause = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!videoRef.current) return;
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    } else {
+      videoRef.current.pause();
+      setIsPlaying(false);
     }
   };
 
@@ -156,14 +170,17 @@ const TestimonialsSection = () => {
                     onClick={(e) => handleVideoCardClick(e, isActive, isPrev, isNext, videoSrc)}
                     title={isActive && videoSrc ? "Double-click to expand" : undefined}
                   >
-                    <div className="w-full h-full rounded-2xl md:rounded-3xl overflow-hidden relative bg-card border border-border/50 group">
+                    <div
+                      className="w-full h-full rounded-2xl md:rounded-3xl overflow-hidden relative bg-card border border-border/50 group"
+                      onMouseEnter={() => isActive && setIsHovered(true)}
+                      onMouseLeave={() => setIsHovered(false)}
+                    >
                       {videoSrc ? (
                         <>
                           <video
                             ref={isActive ? videoRef : undefined}
                             src={videoSrc}
                             className="w-full h-full object-cover"
-                            controls={isActive}
                             muted={isMuted}
                             loop
                             playsInline
@@ -180,6 +197,22 @@ const TestimonialsSection = () => {
                                 <VolumeX className="w-4 h-4" />
                               ) : (
                                 <Volume2 className="w-4 h-4" />
+                              )}
+                            </button>
+                          )}
+
+                          {/* Play / Pause button — centered, visible when paused OR on hover when playing */}
+                          {isActive && (!isPlaying || isHovered) && (
+                            <button
+                              onClick={togglePlayPause}
+                              className="absolute inset-0 m-auto z-50 w-14 h-14 rounded-full bg-black/60 backdrop-blur text-white flex items-center justify-center hover:bg-black/80 transition-all hover:scale-110 shadow-lg"
+                              style={{ top: 0, bottom: 0, left: 0, right: 0, position: 'absolute', margin: 'auto', width: '3.5rem', height: '3.5rem' }}
+                              title={isPlaying ? "Pause" : "Play"}
+                            >
+                              {isPlaying ? (
+                                <Pause className="w-6 h-6 fill-current" />
+                              ) : (
+                                <Play className="w-6 h-6 ml-0.5 fill-current" />
                               )}
                             </button>
                           )}

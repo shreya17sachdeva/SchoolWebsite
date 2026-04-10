@@ -1,5 +1,5 @@
 import { GraduationCap, Star } from "lucide-react";
-import heroImg from "@/assets/hero-children.jpg";
+import heroImg from "@/assets/hero_school.jpeg";
 
 const HeroSection = () => {
   return (

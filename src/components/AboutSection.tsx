@@ -21,17 +21,18 @@ const AboutSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative">
-            <img
-              src={classroomImg}
-              alt="Students in classroom"
-              className="rounded-2xl shadow-xl w-full"
-              loading="lazy"
-              width={800}
-              height={600}
-            />
-            <div className="absolute -bottom-4 -right-4 bg-gold-gradient text-secondary-foreground font-heading font-extrabold text-lg px-6 py-3 rounded-xl shadow-lg">
-              Since 2018
+          <div className="relative flex justify-center">
+            <div className="relative inline-block">
+              <img
+                src={classroomImg}
+                alt="Students in classroom"
+                className="rounded-2xl shadow-xl object-cover"
+                style={{ maxHeight: "380px", width: "auto", maxWidth: "100%" }}
+                loading="lazy"
+              />
+              <div className="absolute -bottom-4 -right-4 bg-gold-gradient text-secondary-foreground font-heading font-extrabold text-lg px-6 py-3 rounded-xl shadow-lg">
+                Since 2018
+              </div>
             </div>
           </div>
 

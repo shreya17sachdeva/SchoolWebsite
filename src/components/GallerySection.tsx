@@ -1,19 +1,19 @@
 import { useState } from "react";
 import { X } from "lucide-react";
 import annualDay from "@/assets/IMG_0619.jpg";
-import science from "@/assets/gallery-science.jpg";
-import yoga from "@/assets/gallery-yoga.jpg";
-import art from "@/assets/gallery-art.jpg";
-import republicDay from "@/assets/gallery-republic-day.jpg";
-import sportsDay from "@/assets/gallery-sports-day.jpg";
+import science from "@/assets/Presentation2.png";
+import yoga from "@/assets/IMG_0673.jpg";
+import art from "@/assets/prize.jpeg";
+import republicDay from "@/assets/result.jpeg";
+import sportsDay from "@/assets/yy.jpeg";
 
 const photos = [
   { src: annualDay, label: "Annual Day Celebration" },
-  { src: science, label: "Science Lab" },
-  { src: yoga, label: "Yoga & Wellness" },
-  { src: art, label: "Art & Craft" },
-  { src: republicDay, label: "Republic Day" },
-  { src: sportsDay, label: "Sports Day" },
+  { src: science, label: "Our Happy Faces" },
+  { src: yoga, label: "" },
+  { src: art, label: "Prize Distribution" },
+  { src: republicDay, label: "Result Day" },
+  { src: sportsDay, label: "" },
 ];
 
 const GallerySection = () => {
