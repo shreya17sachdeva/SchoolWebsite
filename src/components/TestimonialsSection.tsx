@@ -44,10 +44,18 @@ const TestimonialsSection = () => {
   const clickTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handleNext = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+    }
+    setIsPlaying(false);
     setActiveIndex((prev) => (prev + 1) % videoTestimonials.length);
   };
 
   const handlePrev = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+    }
+    setIsPlaying(false);
     setActiveIndex((prev) => (prev - 1 + videoTestimonials.length) % videoTestimonials.length);
   };
 
