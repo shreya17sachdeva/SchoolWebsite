@@ -1,6 +1,6 @@
 import { Bot, Swords, Dribbble, Calculator, BookHeart, CheckCircle2 } from "lucide-react";
-import stemImg from "@/assets/stem-lab.jpg";
-import sportsImg from "@/assets/sports.jpg";
+import stemImg from "@/assets/Untitled-1.jpg";
+import sportsImg from "@/assets/Untitled-2.jpg";
 
 const activities = [
   { icon: Bot, label: "Coding, AI & Robotics" },

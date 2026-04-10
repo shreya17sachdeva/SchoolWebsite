@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { X } from "lucide-react";
-import annualDay from "@/assets/gallery-annual-day.jpg";
+import annualDay from "@/assets/IMG_0619.jpg";
 import science from "@/assets/gallery-science.jpg";
 import yoga from "@/assets/gallery-yoga.jpg";
 import art from "@/assets/gallery-art.jpg";

@@ -1,5 +1,5 @@
 import { Heart, BookOpen, Users, Trophy } from "lucide-react";
-import classroomImg from "@/assets/classroom.jpg";
+import classroomImg from "@/assets/Untitled-3.jpg";
 
 const stats = [
   { icon: BookOpen, value: "CBSE", label: "Pattern" },
