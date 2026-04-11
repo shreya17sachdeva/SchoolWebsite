@@ -5,6 +5,9 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // Uppercase image extensions (e.g. from cameras) are not treated as assets by default;
+  // without this, Vite tries to parse binary JPEG data as JavaScript.
+  assetsInclude: ["**/*.JPG", "**/*.JPEG", "**/*.PNG", "**/*.GIF", "**/*.WEBP"],
   server: {
     host: "::",
     port: 8080,

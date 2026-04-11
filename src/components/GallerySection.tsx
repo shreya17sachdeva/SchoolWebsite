@@ -1,41 +1,41 @@
 import { useState } from "react";
 import { X, Images } from "lucide-react";
 
-// 6 featured photos shown in the main grid
-import photo1 from "@/assets/IMG_0619.jpg";
-import photo2 from "@/assets/IMG_0662.jpg";
-import photo3 from "@/assets/IMG_0054.jpg";
-import photo4 from "@/assets/IMG_0613.jpg";
-import photo5 from "@/assets/IMG_0737.jpg";
-import photo6 from "@/assets/IMG_0673.jpg";
+// Featured row (left → right)
+import img0182 from "@/assets/annual_presentation/IMG_0182.JPG";
+import img0619 from "@/assets/annual_presentation/IMG_0619.JPG";
+import img0673 from "@/assets/annual_presentation/IMG_0673.JPG";
 
-// Remaining 7 shown only in the "View All" modal
-import photo7 from "@/assets/IMG_0059.jpg";
-import photo8 from "@/assets/IMG_0182.jpg";
-import photo9 from "@/assets/IMG_0615.jpg";
-import photo10 from "@/assets/IMG_0618.jpg";
-import photo11 from "@/assets/IMG_0665.jpg";
-import photo12 from "@/assets/IMG_0734.jpg";
-import photo13 from "@/assets/IMG_0740.jpg";
+// Additional photos — "View All" modal only
+import img0054 from "@/assets/annual_presentation/IMG_0054.JPG";
+import img0059 from "@/assets/annual_presentation/IMG_0059.JPG";
+import img0613 from "@/assets/annual_presentation/IMG_0613.JPG";
+import img0615 from "@/assets/annual_presentation/IMG_0615.JPG";
+import img0618 from "@/assets/annual_presentation/IMG_0618.JPG";
+import img0662 from "@/assets/annual_presentation/IMG_0662.JPG";
+import img0665 from "@/assets/annual_presentation/IMG_0665.JPG";
+import img0734 from "@/assets/annual_presentation/IMG_0734.JPG";
+import img0737 from "@/assets/annual_presentation/IMG_0737.JPG";
+import img0740 from "@/assets/annual_presentation/IMG_0740.JPG";
 
 const featuredPhotos = [
-  { src: photo1, label: "Annual Day Celebration" },
-  { src: photo2, label: "Cultural Performance" },
-  { src: photo3, label: "Student Showcase" },
-  { src: photo4, label: "Award Ceremony" },
-  { src: photo5, label: "Prize Distribution" },
-  { src: photo6, label: "Dance Performance" },
+  { src: img0182, label: "Stage Performance" },
+  { src: img0619, label: "Annual Day Celebration" },
+  { src: img0673, label: "Dance Performance" },
 ];
 
 const allPhotos = [
   ...featuredPhotos,
-  { src: photo7,  label: "Group Celebration" },
-  { src: photo8,  label: "Stage Performance" },
-  { src: photo9,  label: "Proud Moments" },
-  { src: photo10, label: "Felicitation Ceremony" },
-  { src: photo11, label: "Colourful Traditions" },
-  { src: photo12, label: "School Community" },
-  { src: photo13, label: "Joyful Memories" },
+  { src: img0054, label: "Student Showcase" },
+  { src: img0059, label: "Group Celebration" },
+  { src: img0613, label: "Award Ceremony" },
+  { src: img0615, label: "Proud Moments" },
+  { src: img0618, label: "Felicitation Ceremony" },
+  { src: img0662, label: "Cultural Performance" },
+  { src: img0665, label: "Colourful Traditions" },
+  { src: img0734, label: "School Community" },
+  { src: img0737, label: "Prize Distribution" },
+  { src: img0740, label: "Joyful Memories" },
 ];
 
 const GallerySection = () => {
@@ -80,8 +80,8 @@ const GallerySection = () => {
           </p>
         </div>
 
-        {/* 6-photo featured grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        {/* One row: three featured photos */}
+        <div className="grid grid-cols-3 gap-3 sm:gap-4">
           {featuredPhotos.map((photo, i) => (
             <button
               key={i}
@@ -110,7 +110,7 @@ const GallerySection = () => {
             className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-primary text-primary-foreground font-heading font-bold text-sm shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200"
           >
             <Images className="w-4 h-4" />
-            View All {allPhotos.length} Photos
+            View All
           </button>
         </div>
       </div>
