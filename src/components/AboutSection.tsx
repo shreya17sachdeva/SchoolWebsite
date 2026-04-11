@@ -1,10 +1,10 @@
-import { Heart, BookOpen, Users, Trophy } from "lucide-react";
-import classroomImg from "@/assets/Untitled-3.jpg";
+import { Heart, BookOpen, Users, Trophy, School } from "lucide-react";
+import classroomImg from "@/assets/owner.png";
 
 const stats = [
   { icon: BookOpen, value: "CBSE", label: "Pattern" },
-  { icon: Users, value: "500+", label: "Students" },
   { icon: Trophy, value: "10+", label: "Activities" },
+  { icon: School, value: "Smart", label: "Classroom" },
   { icon: Heart, value: "100%", label: "Dedication" },
 ];
 
@@ -20,23 +20,20 @@ const AboutSection = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="relative flex justify-center">
             <div className="relative inline-block">
               <img
                 src={classroomImg}
-                alt="Students in classroom"
+                alt="OwnerImg"
                 className="rounded-2xl shadow-xl object-cover"
-                style={{ maxHeight: "380px", width: "auto", maxWidth: "100%" }}
+                style={{ maxHeight: "400px", width: "auto", maxWidth: "100%" }}
                 loading="lazy"
               />
-              <div className="absolute -bottom-4 -right-4 bg-gold-gradient text-secondary-foreground font-heading font-extrabold text-lg px-6 py-3 rounded-xl shadow-lg">
-                Since 2018
-              </div>
             </div>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-6 md:-ml-4">
             <p className="font-body text-muted-foreground text-lg leading-relaxed">
               At Greenwood Public School, we believe education is not just a business — it's a responsibility.
               Under the visionary guidance of <strong className="text-foreground">Ishita Mam & Aakash Sir</strong>,
@@ -44,7 +41,8 @@ const AboutSection = () => {
               values, and 21st-century skills.
             </p>
             <p className="font-body text-muted-foreground leading-relaxed">
-              हम शिक्षा को व्यापार नहीं, जिम्मेदारी मानते हैं। Our campus at Greenpark Colony, Jhotwara, Jaipur
+              हम शिक्षा को व्यापार नहीं, जिम्मेदारी मानते हैं। 
+              <br></br>Our campus at Greenpark Colony, Jhotwara, Jaipur
               provides a safe, inspiring environment where every child can discover their potential.
             </p>
 

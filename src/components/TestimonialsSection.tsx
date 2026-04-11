@@ -7,28 +7,31 @@ const videoTestimonials = [
     id: 1,
     title: "A parent's review on early childhood development",
     thumbnail: "",
-    videoSrc: "/parent's feedback.mp4",
+    videoSrc: "/Feedback1.mp4",
   },
   {
     id: 2,
     title: "Why we chose Greenwood for our children",
     thumbnail: "",
-    videoSrc: "/parent's feedback (1).mp4",
+    videoSrc: "/Feedback2.mp4",
   },
   {
     id: 3,
     title: "How the teachers support student growth",
-    thumbnail: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=400&h=700&auto=format&fit=crop&q=80",
+    thumbnail: "",
+    videoSrc: "/Feedback3.mp4",
   },
   {
     id: 4,
     title: "Our experience with the admission process",
-    thumbnail: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400&h=700&auto=format&fit=crop&q=80",
+    thumbnail: "",
+    videoSrc: "/Feedback4.mp4",
   },
   {
     id: 5,
     title: "The amazing extracurricular activities",
-    thumbnail: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=700&auto=format&fit=crop&q=80",
+    thumbnail: "",
+    videoSrc: "/parent's feedback (1).mp4",
   },
 ];
 
@@ -267,9 +270,9 @@ const TestimonialsSection = () => {
                         </>
                       )}
 
-                      {isActive && (video as any).title && (
-                        <div className="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
-                          <p className="text-white font-heading font-medium text-lg md:text-xl leading-tight drop-shadow-md">
+                      {isActive && video.title && (
+                        <div className="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-black/90 via-black/60 to-transparent z-10 pointer-events-none">
+                          <p className="text-white font-heading font-semibold text-base md:text-lg leading-snug drop-shadow-md">
                             "{video.title}"
                           </p>
                         </div>

@@ -3,7 +3,6 @@ import { Gift, FileCheck, UserPlus, PartyPopper } from "lucide-react";
 const steps = [
   { icon: UserPlus, title: "Visit Campus", desc: "Schedule a campus tour to see our facilities" },
   { icon: FileCheck, title: "Fill Form", desc: "Complete the simple admission form" },
-  { icon: Gift, title: "Free Admission!", desc: "No admission fees — education for all" },
   { icon: PartyPopper, title: "Welcome!", desc: "Your child joins the Greenwood family" },
 ];
 
@@ -16,20 +15,18 @@ const AdmissionsSection = () => {
 
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-12">
-          <span className="inline-block bg-primary-foreground/20 text-primary-foreground font-heading font-bold text-sm px-4 py-1 rounded-full mb-3">
-            🎓 Admissions Open 2025-26
-          </span>
+          
           <h2 className="font-heading font-black text-3xl md:text-5xl text-primary-foreground">
-            Free Admission Fees!
+            🎓 Admissions Open 2025-26
           </h2>
           <p className="font-body text-primary-foreground/80 mt-3 max-w-md mx-auto">
             Play Group (2.5 Years) | Nursery | KG | Class 1st to 8th & Beyond
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+        <div className="flex flex-col sm:flex-row justify-center gap-6 mb-10 flex-wrap">
           {steps.map((s, i) => (
-            <div key={s.title} className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-primary-foreground/20">
+            <div key={s.title} className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-primary-foreground/20 w-full sm:w-56 md:w-64 flex-shrink-0">
               <div className="w-12 h-12 bg-gold-gradient rounded-full flex items-center justify-center mx-auto mb-4 font-heading font-black text-secondary-foreground text-lg">
                 {i + 1}
               </div>
