@@ -15,9 +15,11 @@ const AdmissionsSection = () => {
 
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-12">
-          
+          <span className="inline-block bg-accent text-accent-foreground font-heading font-bold text-sm px-4 py-1 rounded-full mb-3">
+              Enroll Now
+            </span>
           <h2 className="font-heading font-black text-3xl md:text-5xl text-primary-foreground">
-            🎓 Admissions Open 2025-26
+            Admissions <span className="text-gradient-gold">Open</span>
           </h2>
           <p className="font-body text-primary-foreground/80 mt-3 max-w-md mx-auto">
             Play Group (2.5 Years) | Nursery | KG | Class 1st to 8th & Beyond

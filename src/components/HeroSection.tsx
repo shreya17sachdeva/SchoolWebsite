@@ -1,6 +1,15 @@
 import { GraduationCap, Star } from "lucide-react";
 import heroImg from "@/assets/hero_school.jpeg";
 
+// Indian academic year: April–March (e.g. April 2025 → "2025-26")
+const getAdmissionYear = () => {
+  const now = new Date();
+  const year = now.getFullYear();
+  // Months are 0-indexed; month >= 3 means April or later
+  const startYear = now.getMonth() >= 3 ? year : year - 1;
+  return `${startYear}-${String(startYear + 1).slice(-2)}`;
+};
+
 const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
@@ -15,7 +24,7 @@ const HeroSection = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-secondary/90 text-secondary-foreground px-4 py-2 rounded-full font-heading font-bold text-sm animate-fade-in-up">
             <Star className="h-4 w-4" fill="currentColor" />
-            Admissions Open 2025-26
+            Admissions Open {getAdmissionYear()}
             <Star className="h-4 w-4" fill="currentColor" />
           </div>
 
