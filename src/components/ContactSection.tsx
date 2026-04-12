@@ -54,7 +54,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-foreground">Adjacent to</h3>
-                <p className="font-body text-sm text-muted-foreground">200 feet By Pass Road</p>
+                <p className="font-body text-sm text-muted-foreground">200 Feet Bypass Road</p>
               </div>
             </div>
           </div>

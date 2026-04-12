@@ -47,7 +47,7 @@ const HeroSection = () => {
               href="#admissions"
               className="inline-flex items-center gap-2 bg-gold-gradient text-secondary-foreground px-8 py-3 rounded-xl font-heading font-extrabold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all"
             >
-              <GraduationCap className="h-5 w-5" /> Enroll Now — Free Admission!
+              <GraduationCap className="h-5 w-5" /> Enroll Now !
             </a>
             <a
               href="#about"

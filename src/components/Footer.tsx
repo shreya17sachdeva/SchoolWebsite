@@ -19,7 +19,7 @@ const Footer = () => {
           </p> */}
 
           <p className="font-body text-xs text-primary-foreground/40">
-            © 2025 Greenwood Public School. All rights reserved.
+            © 2026 Greenwood Public School. All rights reserved.
           </p>
         </div>
       </div>

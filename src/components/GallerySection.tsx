@@ -19,22 +19,22 @@ import img0737 from "@/assets/annual_presentation/IMG_0737.JPG";
 import img0740 from "@/assets/annual_presentation/IMG_0740.JPG";
 
 const featuredPhotos = [
-  { src: img0182, label: "Stage Performance" },
-  { src: img0619, label: "Annual Day Celebration" },
-  { src: img0673, label: "Dance Performance" },
+  { src: img0182, label: "Opening Ceremony" },
+  { src: img0619, label: "Dance Performance" },
+  { src: img0673, label: "Felicitation Ceremony" },
 ];
 
 const allPhotos = [
   ...featuredPhotos,
   { src: img0054, label: "Student Showcase" },
-  { src: img0059, label: "Group Celebration" },
-  { src: img0613, label: "Award Ceremony" },
-  { src: img0615, label: "Proud Moments" },
-  { src: img0618, label: "Felicitation Ceremony" },
-  { src: img0662, label: "Cultural Performance" },
-  { src: img0665, label: "Colourful Traditions" },
-  { src: img0734, label: "School Community" },
-  { src: img0737, label: "Prize Distribution" },
+  { src: img0059, label: "Student Performance" },
+  { src: img0613, label: "Student Performance" },
+  { src: img0615, label: "Student Performance" },
+  { src: img0618, label: "Student Performance"},
+  { src: img0662, label: "Student Performance" },
+  { src: img0665, label: "Student Performance" },
+  { src: img0734, label: "Student Performance" },
+  { src: img0737, label: "Student Performance" },
   { src: img0740, label: "Joyful Memories" },
 ];
 
@@ -69,7 +69,7 @@ const GallerySection = () => {
         {/* Section header */}
         <div className="text-center mb-12">
           <span className="inline-block bg-accent text-accent-foreground font-heading font-bold text-sm px-4 py-1 rounded-full mb-3">
-            Annual Day 2024
+            Annual Day
           </span>
           <h2 className="font-heading font-black text-3xl md:text-5xl text-foreground">
             Reliving the <span className="text-gradient-green">Magic</span>
@@ -136,7 +136,7 @@ const GallerySection = () => {
             </button>
 
             <h3 className="text-white font-heading font-black text-2xl mb-6 text-center drop-shadow">
-              Annual Day 2024 — All Photos
+              Annual Presentation Day
             </h3>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
